@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="estilos/first.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
 </head>
 <body>
     <main>
@@ -16,15 +18,26 @@
             <div id="form">
                 <h1>Login</h1>
                 <p>Seja bem-vindo(a) novamente. Faça login para poder acessar sua conta e poder fazer as configuações no seu ambiente.</p>
-                <form action="login.php" method="post">
 
-                    <!-- <label for="inome">#</label>
-                    <input type="text" name="nome" id="inome" maxlength="35" required placeholder="Nome completo" autocomplete="name">
+                <form action="login.php" method="post" autocomplete="on">
 
-                    <label for="isenha">#</label>
-                    <input type="password" name="senha" id="isenha" min="8" required placeholder="********" autocomplete="new-password">
+                    <div class="campo">
+                        <i class="material-icons">person</i>
+                        <input type="email" name="login" id="ilogin" maxlength="30" required placeholder="Seu e-mail" autocomplete="email">
+                        <label for="ilogin">Login</label>
+                    </div>
 
-                    <input type="submit" value="Enviar"> -->
+                    <div class="campo">
+                        <i class="material-icons">vpn_key</i>
+                        <input type="password" name="senha" id="isenha" minlength="8" maxlength="20" placeholder="********" autocomplete="new-password">
+                        <label for="isenha">Senha</label>
+                    </div>
+                    
+                    <input type="submit" value="Entrar">
+
+                    <a href="esqueci.html">
+                        Esqueci a senha  <i class="material-icons">mail</i>
+                    </a>
                 </form>
             </div>
         </section>

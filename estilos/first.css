@@ -1,12 +1,5 @@
 @charset "UTF-8";
 
-:root{
-    --cor01: #49a09d;
-    --cor02: #5f2c82;
-    --cor03: #ffffff;
-    --cor04: #000000;
-}
-
 /* 
     PALETA DE CORES
     verde: #49a09d
@@ -14,10 +7,19 @@
 
 */
 
+:root{
+    --cor01: #49a09d;
+    --cor02: #5f2c82;
+    --cor03: #ffffff;
+    --cor04: #000000;
+    --font01:  -apple-system, 'Helvetica Neue', sans-serif;
+}
+
+
 *{
     margin: 0px;
     padding: 0px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family:var(--font01);
     box-sizing: border-box;
 }
 
@@ -43,10 +45,13 @@ section#login{
     overflow: hidden;
 
     background-color: var(--cor03);
-    width: 250px;
+    width: 265px;
     height: 500px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.441);
+
+    transition:  width 0.3, height 0.3;
+    transition-timing-function: ease;
 }
 
 section#login > div#img{
@@ -62,4 +67,13 @@ section#login > div#img{
 section#login > div#form{
     padding: 10px;
     display: block;
+}
+
+div#form > h1{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+div#form > p{
+    font-size: 0.7em;
 }
