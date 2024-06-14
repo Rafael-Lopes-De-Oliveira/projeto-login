@@ -40,19 +40,20 @@ main{
 section#login{
     display: block;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     overflow: hidden;
-
+    
     background-color: var(--cor03);
     width: 265px;
-    height: 500px;
+    height: 470px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.441);
-
-    transition:  width 0.3, height 0.3;
+    
+    top: 50%;
+    left: 50%;
+    
     transition-timing-function: ease;
+    transition:  width 0.3, height 0.3;
+    transform: translate(-50%, -50%);
 }
 
 section#login > div#img{
@@ -92,46 +93,77 @@ form > div.campo{
     background-color: var(--cor02);
 }
 
-form > div.campo label{
+div.campo label{
     display: none;
 }
 
-form > input[type=submit]{
-    transition: margin-top .2s;
+div.campo > i{
+    color: var(--cor03);
+    font-size: 2em;
+    width: 40px;
+    padding: 2px 5px;
+}
 
+div.campo > input{
+    background-color: #83d2d0;
+
+    font-size: 1em;
+    width: calc(100% - 45px);
+    height: 100%;
+
+    border: 0px;
+    border-radius: 8px;
+    padding: 7px;
+
+    transform: translateY(-14px);
+}
+
+div.campo > input:focus-within{
+    background-color: var(--cor03);
+}
+
+form > input[type=submit]{
+    
     width: 100%;
     height: 35px;
-
+    
     margin-bottom: 4px;
     font-size: 1em;
     border: none;
-    border-radius: 5px;
-
+    border-radius: 8px;
+    
     color: white;
     background-color: var(--cor01);
+
+    transition: margin-top .2s;
 }
 
 form > input[type=submit]:hover{
+
     background-color:var(--cor01-2);
     margin-top: 5px;
     margin-bottom: 3px;
+
+    transition-timing-function: ease;
 }
 
 form > a.botao{
-    transition: margin-top .2s;
     display: block;
-
+    
     width: 100%;
     height: 35px;
-
+    
     font-size: 1em;
     text-decoration: none;
     text-align: center;
-
+    
     color: var(--cor04);
     background-color: var(--cor03);
     border: 1px solid var(--cor01-2);
     border-radius: 5px;
+
+    transition-timing-function: ease;
+    transition: margin-top .2s;
 }
 
 form > a.botao > i{

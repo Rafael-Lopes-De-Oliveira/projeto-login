@@ -22,13 +22,14 @@
 
 
 
-@media screen and (min-width:768px) and (max-width:992px) {
+@media screen and (min-width:768px) and (max-width:992px) { /*Config Tablet*/
     body{
         background-image: linear-gradient(to top, rgb(115, 45, 115), rgba(236, 236, 63, 0.777) 40% , rgba(0, 0, 0, 0.595) );
     }
     
     section#login{
         width: 80vw;
+        height: 300px;
     }
 
     section#login > div#img{
@@ -55,13 +56,15 @@
 }
 
 @media screen and (min-width:992px) {
-
+    /*Config para Desktop*/
+    
     body{
         background-image: linear-gradient(to top, rgb(115, 45, 115), rgba(236, 236, 63, 0.777) 40% , rgba(0, 0, 0, 0.595) );
     }
 
     section#login{
         width: 930px;
+        height: 450px;
     }
 
     section#login > div#img{
